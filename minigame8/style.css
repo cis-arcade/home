@@ -1,0 +1,84 @@
+      /* Basic styling for the game layout */
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: monospace, sans-serif;
+        background: #588157;
+        color:#a3b18a;
+        }
+      
+      .trait-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+        width: 80%;
+      }
+      
+      .trait {
+        text-align: center;
+        cursor: pointer;
+      }
+      
+      .trait img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        transition: transform 0.3s;
+      }
+      
+      .trait img:hover {
+        transform: scale(1.04);
+      }
+      
+      .final-stats {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      
+      #result-overlay {
+          display: none; /* Initially hidden */
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
+          color: white;
+          justify-content: center;
+          align-items: center;
+          z-index: 1000; /* Ensure it’s on top */
+          text-align: center;
+      }
+      
+      #result-overlay h1 {
+          font-size: 3em;
+          margin: 0;
+      }
+      .trait-info {
+          text-align: center;
+          font-size: 0.9em;
+          margin-top: 5px;
+          color: #333;
+      }
+      
+      h1 {
+        font-size: 91px;
+        margin-bottom:10px;
+        background: #344e41;
+      }
+      h3{
+        font-size: 25px;
+      }
+      p{
+        font-size:  20px;
+        
+      }
+      #main{
+        background: #dad7cd;
+        width: 80%;
+      }
+      
+      
+      
