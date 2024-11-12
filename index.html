@@ -1,57 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Character Builder Game</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <h1>Tik Tok Mini-Game Emulator</h1>
-        <p>Select the best attributes to create your character:</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Landing Page</title>
+    <style>
+        /* Reset basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <!-- Container for each trait with placeholders for images -->
-        <div class="trait-container">
-            <div class="trait" id="power">
-                <h3 id="power-header">Power</h3>
-                <img src="placeholder.jpg" alt="Power Trait" id="power-img">
-            </div>
-            <div class="trait" id="durability">
-                <h3 id="durability-header">Durability</h3>
-                <img src="placeholder.jpg" alt="Durability Trait" id="durability-img">
-            </div>
-            <div class="trait" id="speed">
-                <h3 id="durability-header">Speed</h3>
-                <img src="placeholder.jpg" alt="Speed Trait" id="speed-img">
-            </div>
-            <div class="trait" id="combat-skills">
-                <h3 id="durability-header">Combat Skills</h3>
-                <img src="placeholder.jpg" alt="Combat Skills Trait" id="combat-skills-img">
-            </div>
-        </div>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            color: #ffffff;
+            overflow: hidden;
+        }
 
-        <!-- Opponent Display -->
-        <div id="opponent" style="text-align: center; margin: 20px;">
-            <!-- Opponent character info will be populated here by JavaScript -->
-        </div>
+        /* Split screen styling */
+        .left-section {
+            width: 50%;
+            background: url('cis-logo.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
 
-        <!-- User Character's Final Stats Display -->
-        <div class="final-stats" id="final-stats">
-            <!-- User's final character stats will display here -->
-        </div>
+        .right-section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #1F1A50;
+            padding: 2em;
+            text-align: center;
+        }
 
-        <!-- Result Display -->
-        <div id="result-overlay">
-            <!-- Victory or defeat result will display here -->
-        </div>
+        /* Title and text styling */
+        h1 {
+            font-size: 3em;
+            color: #A2CE5D; /* Bold color for title */
+            margin-bottom: 0.5em;
+        }
 
-        <script src="main.js"></script>
-    </body>
+        p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            color: #cccccc;
+        }
+
+        /* Button/link styling */
+        .link {
+            display: inline-block;
+            margin: 0.5em;
+            padding: 1em 2em;
+            background-color: #fbb514; /* Bright color for arcade theme */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: all 0.3s;
+            box-shadow: 0px 4px 15px rgba(255, 77, 109, 0.4); /* Neon glow */
+        }
+
+        .link:hover {
+            background-color: #FF4D6D;
+            box-shadow: 0px 4px 20px rgba(255, 77, 109, 0.8); /* Stronger glow */
+            transform: scale(1.05);
+        }
+
+        /* Logo animation */
+        .left-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Overlay for text contrast */
+        }
+
+        .left-section {
+            animation: pulse 5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="left-section"></div>
+    <div class="right-section">
+        <h1>Welcome to the Arcade!</h1>
+        <p>Select a game to start playing:</p>
+        <a href="minigame7.html" class="link">Play Minigame 7</a>
+        <a href="minigame8.html" class="link">Play Minigame 8</a>
+    </div>
+</body>
 </html>
-
-
-
-
-
-
-
