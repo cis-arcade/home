@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CIS Arcade</title>
     <style>
-        /* Reset basic styling */
+        /* Resetting basic styling */
         * {
             margin: 0;
             padding: 0;
@@ -15,93 +15,99 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            height: 100vh;
-            color: #ffffff;
-            overflow: hidden;
-        }
-
-        /* Split screen styling */
-        .left-section {
-            width: 50%;
-            background: url('cis-logo.jpg') no-repeat center center;
-            background-size: cover;
-            position: relative;
-        }
-
-        .right-section {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #1F1A50;
-            padding: 2em;
-            text-align: center;
+            height: 100vh;
+            overflow: hidden;
+            color: #ffffff;
         }
 
-        /* Title and text styling */
-        h1 {
-            font-size: 3em;
-            color: #A2CE5D; /* Bold color for title */
-            margin-bottom: 0.5em;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 2em;
-            color: #cccccc;
-        }
-
-        /* Button/link styling */
-        .link {
-            display: inline-block;
-            margin: 0.5em;
-            padding: 1em 2em;
-            background-color: #fbb514; /* Bright color for arcade theme */
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.2em;
-            transition: all 0.3s;
-            box-shadow: 0px 4px 15px rgba(255, 77, 109, 0.4); /* Neon glow */
-        }
-
-        .link:hover {
-            background-color: #FF4D6D;
-            box-shadow: 0px 4px 20px rgba(255, 77, 109, 0.8); /* Stronger glow */
-            transform: scale(1.05);
-        }
-
-        /* Logo animation */
-        .left-section::after {
-            content: "";
+        /* Fullscreen background styling */
+        .hero-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Overlay for text contrast */
+            background: url('cis-logo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(4px) brightness(0.7); /* Adds blur and darkens background */
+            animation: zoomIn 10s infinite alternate ease-in-out; /* Subtle zoom animation */
+            z-index: -1;
         }
 
-        .left-section {
-            animation: pulse 5s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
+        /* Zoom animation */
+        @keyframes zoomIn {
+            0% {
                 transform: scale(1);
             }
-            50% {
-                transform: scale(1.02);
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Content styling */
+        .content {
+            text-align: center;
+            padding: 2em;
+            backdrop-filter: blur(5px); /* Adds a frosted glass effect */
+            background: rgba(31, 26, 80, 0.5); /* Semi-transparent overlay for readability */
+            border-radius: 12px;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #A2CE5D; /* Bright color for title */
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #cccccc;
+            margin-bottom: 1.5em;
+        }
+
+        /* Button styling */
+        .link {
+            display: inline-block;
+            margin: 0.5em;
+            padding: 1em 2em;
+            background-color: #fbb514;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 15px rgba(255, 77, 109, 0.4); /* Neon glow effect */
+        }
+
+        .link:hover {
+            background-color: #FF4D6D;
+            box-shadow: 0px 4px 20px rgba(255, 77, 109, 0.8); /* Stronger glow on hover */
+            transform: scale(1.05);
+        }
+
+        /* Cursor effect */
+        .content:hover .link {
+            animation: wave 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes wave {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-3px);
             }
         }
     </style>
 </head>
 <body>
-    <div class="left-section"></div>
-    <div class="right-section">
+    <div class="hero-background"></div>
+    <div class="content">
         <h1>Welcome to the Career Institute South Arcade!</h1>
-        <p>Select a game to start playing:</p>
+        <p>Choose a game and get started:</p>
         <a href="minigame7/minigame7.html" class="link">Play Minigame 7</a>
         <a href="minigame8/minigame8.html" class="link">Play Minigame 8</a>
     </div>
