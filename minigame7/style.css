@@ -7,15 +7,19 @@
      font-family: Arial, sans-serif;
      background:#80b1db;
      color:#5c42a1;
+     background-image: url("https://www.worldatlas.com/upload/10/cd/10/shutterstock-565337620.jpg")
 }
  h1{
      font-size: 90px;
+     font-family: "Comic Sans MS";
+     color: black;
 }
  .trait-container {
      display: flex;
      justify-content: space-around;
      margin: 20px 0;
      width: 80%;
+     background: black;
 }
  .trait {
      text-align: center;
