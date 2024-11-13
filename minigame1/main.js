@@ -365,8 +365,6 @@ characterData = [
         if (Object.values(selectedTraits).every(trait => trait !== null)) {
             displayFinalStats();
         } else {
-            console.log("done")
-            console.log(selectedTraits)
             startShufflingAllTraits();
             setTimeout(stopShufflingAllTraits, 1000); // Reshuffle remaining traits for 1 second
         }
@@ -385,11 +383,9 @@ characterData = [
     
     // Calculate the user's total score and compare with the opponent's score
     function calculateVictory() {
-        const userTotal = Object.keys(selectedTraits).reduce((sum, trait) => sum + selectedTraits[trait][trait], 0);
-      console.log(userTotal)
-        const opponentTotal = opponentCharacter.power + opponentCharacter.durability +
-                              opponentCharacter.speed + opponentCharacter["combat-skills"];
-        console.log(opponentTotal)
+        const userTotal = selectedTraits["combat-skills"]["combat skills"] * 2 + selectedTraits.speed.speed * 1.3 + selectedTraits.durability.durability * 1.5 + selectedTraits.power.power * 1.8
+        const opponentTotal = opponentCharacter.power * 1.8 + opponentCharacter.durability * 1.5 +
+                              opponentCharacter.speed * 1.3 + opponentCharacter["combat skills"] * 2;
         if (userTotal > opponentTotal) {
             showOverlay("VICTORY");
     
