@@ -16,8 +16,8 @@ body {
   }
 
   #eight-ball {
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
     background: url('https://upload.wikimedia.org/wikipedia/commons/e/eb/Magic_eight_ball.png') no-repeat center center;
     background-size: contain;
     position: relative;
@@ -35,4 +35,8 @@ body {
     40% { transform: translate(10px, 0); }
     60% { transform: translate(-10px, 0); }
     80% { transform: translate(10px, 0); }
+  }
+  
+  h1 {
+    font-size: 80px;
   }
