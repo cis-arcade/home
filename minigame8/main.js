@@ -339,6 +339,7 @@ let selectedTraits = { "power": null, "durability": null, "speed": null, "combat
 let opponentCharacter = null;
 const shuffleInterval = 100;
 let shuffleTimers = {};
+let win_counter=0;
 
 // Start the game by generating an opponent and shuffling all traits for 1 second initially
 function startGame() {
@@ -435,7 +436,13 @@ function calculateVictory() {
     console.log(opponentTotal)
     if (userTotal > opponentTotal) {
         showOverlay("VICTORY");
-
+        win_counter=win_counter+1
+        const win_element=document.getElementById("win-counter")
+        win_element.innerHTML=win_counter
+        console.log("Win rate: " + win_counter)
+    
+        
+        
     } else {
         showOverlay("DEFEAT");
     }

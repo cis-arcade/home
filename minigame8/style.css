@@ -80,5 +80,10 @@
         width: 80%;
       }
       
-      
+      #win-counter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size:30px;
+      }
       
