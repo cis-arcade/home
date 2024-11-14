@@ -11,8 +11,13 @@ const responses = [
     "My sources say no."
   ];
 
+  const special = {
+    "Am I funny?": "lol no",
+    "Is Mr Mercado funny?": "Luck is shining upon you!",
+  };
+
   document.getElementById("shake-button").addEventListener("click", function() {
-    const question = document.getElementById("question").value;
+    const question = document.getElementById("question").value.trim();
     if (!question) {
       alert("Please enter a question.");
       return;
@@ -30,7 +35,11 @@ const responses = [
     // Stop shaking after 2 seconds and show the answer
     setTimeout(() => {
       eightBall.style.animation = "";
-      const randomAnswer = responses[Math.floor(Math.random() * responses.length)];
-      answerDiv.innerText = randomAnswer;
+      
+      // Check if the question has a special answer
+      const response = special[question] || responses[Math.floor(Math.random() * responses.length)];
+      
+      // Display the appropriate response
+      answerDiv.innerText = response;
     }, 2000);
   });
