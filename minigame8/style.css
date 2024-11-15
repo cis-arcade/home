@@ -10,7 +10,7 @@
       
       #trait-container {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-around;
         margin: 20px 0;
         width: 50%;
