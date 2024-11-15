@@ -32,7 +32,7 @@ body {
 
   #eight-ball {
     min-width: 400px;
-    min-height: 400px;
+    min-height: 200px;
     background: url('https://upload.wikimedia.org/wikipedia/commons/e/eb/Magic_eight_ball.png') no-repeat center center;
     background-size: contain;
     position: relative;
