@@ -3,21 +3,36 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #282c34;
-    color: #ffffff;
+    background-color: rgba(31, 26, 80, 1);
+    color: #A2CE5D;
     text-align: center;
     margin: 0;
   }
 
   .question-box {
     margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+  }
+
+  .child{
+    margin: 10px;
+    flex: 1;
+  }
+  
+  #button-special {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   #eight-ball {
-    width: 400px;
-    height: 400px;
+    min-width: 400px;
+    min-height: 400px;
     background: url('https://upload.wikimedia.org/wikipedia/commons/e/eb/Magic_eight_ball.png') no-repeat center center;
     background-size: contain;
     position: relative;
@@ -42,15 +57,15 @@ body {
   }
 /* From Uiverse.io by himanshu9682 */ 
 .type--A {
-    --line_color: #555555;
+    --line_color: #A2CE5D;
     --back_color: #ffecf6;
   }
   .type--B {
-    --line_color: #1b1919;
+    --line_color: #A2CE5D;
     --back_color: #e9ecff;
   }
   .type--C {
-    --line_color: #00135c;
+    --line_color: #A2CE5D;
     --back_color: #defffa;
   }
   .button {
@@ -282,15 +297,7 @@ body {
       width: 124px;
     }
   }
-  
-  .container {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+
   .button:not(:last-child) {
     margin-bottom: 64px;
   }
