@@ -13,31 +13,31 @@ const responses = [
   ];
 
   const special = {
-    "Am I funny?": "lol no",
-    "Is Mr Mercado funny?": "Luck is shining upon you!",
-    "Who am I?" : "Who? A nobody.",
-    "Where am I?": "In your dad's basement eating chips.",
-    "How old am I?": "You're a teen and still don't know how old you are.",
-    "What's your name?": "I have no name but you can call me sir.",
-    "Is  Michael Jordan better than LeBron James" : "in your dreams",
-    "What is a all mexican job site biggest fear " : "are you sure you want to ask this question?",
-    "Why was the math book depressed?" : "Because it had too many problems.",
-    "What does a bee do at the gym?" : "Zumba!",
-    "Why don’t birds use Facebook?" : "Because they already have Twitter.",
-    "What does one iguana say to her twin sister?." : "Iguan-ya, too!",
-    "Why don’t skeletons fight?" : "Because they don’t have the guts.",
-    "Is Mr. Mercado secretly a cat?" : "Absoduckinglutely.",
-    "How many toes do i have." : "Ask ur mom.",
-    "Are you with the nupe?" : "SHE WITH THE NUPES NOW SHE WITH THE NUPES NOW SAID SHE LIKE YOU BUT SHE LOVE ME",
-    "Am I pretty?" : "(Hell nah) or (probably not).",
-    "Man or Bear?" : "Beer.",
-    "Am I gonna be successful?" : "(Nah) or (yup).",
-    "Are you magic?" : "(Hell nah) or (duh)",
-    "Is the sky up?" : "(Erm idk)",
-  };
+    'am i funny?': 'lol no',
+    'is mr mercado funny?': 'Luck is shining upon you!',
+    'who am i?': 'Who? A nobody.',
+    'where am i?': "In your dad's basement eating chips.",
+    'how old am i?': "You're a teen and still don't know how old you are.",
+    "what's your name?": 'I have no name but you can call me sir.',
+    'is  michael jordan better than lebron james': 'in your dreams',
+    'what is a all mexican job site biggest fear ': 'are you sure you want to ask this question?',
+    'why was the math book depressed?': 'Because it had too many problems.',
+    'what does a bee do at the gym?': 'Zumba!',
+    'why don’t birds use facebook?': 'Because they already have Twitter.',
+    'what does one iguana say to her twin sister?.': 'Iguan-ya, too!',
+    'why don’t skeletons fight?': 'Because they don’t have the guts.',
+    'is mr. mercado secretly a cat?': 'Absoduckinglutely.',
+    'how many toes do i have.': 'Ask ur mom.',
+    'are you with the nupe?': 'SHE WITH THE NUPES NOW SHE WITH THE NUPES NOW SAID SHE LIKE YOU BUT SHE LOVE ME',
+    'am i pretty?': '(Hell nah) or (probably not).',
+    'man or bear?': 'Beer.',
+    'am i gonna be successful?': '(Nah) or (yup).',
+    'are you magic?': '(Hell nah) or (duh)',
+    'is the sky up?': '(Erm idk)'
+    };
 
-  document.getElementById("shake-button").addEventListener("click", function() {
-    const question = document.getElementById("question").value.trim();
+  document.getElementById("button-special").addEventListener("click", function() {
+    const question = document.getElementById("question").value.trim().toLowerCase();
     if (!question) {
       alert("Please enter a question.");
       return;
