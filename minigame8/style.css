@@ -8,18 +8,29 @@
         color:#a3b18a;
         }
       
-      .trait-container {
+      #trait-container {
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         margin: 20px 0;
-        width: 80%;
+        width: 50%;
       }
       
       .trait {
         text-align: center;
         cursor: pointer;
       }
+
+      #content {
+        display: flex;
+        flex-direction: row;
+      }
       
+      .content-child{
+        flex: 1;
+        margin: 20px;
+      }
+
       .trait img {
         width: 150px;
         height: 150px;

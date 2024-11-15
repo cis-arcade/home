@@ -12,36 +12,42 @@
         <a href="/home/" class="home-button">Home</a>
 
         <div id="win-counter"></div>
+        <div id="content"> 
+            <!-- Container for each trait with placeholders for images -->
+            <div class="content-child" id="trait-container">
+                <div class="trait" id="power">
+                    <h3 id="power-header">Power</h3>
+                    <img src="placeholder.jpg" alt="Power Trait" id="power-img">
+                </div>
+                <div class="trait" id="durability">
+                    <h3 id="durability-header">Durability</h3>
+                    <img src="placeholder.jpg" alt="Durability Trait" id="durability-img">
+                </div>
+                <div class="trait" id="speed">
+                    <h3 id="durability-header">Speed</h3>
+                    <img src="placeholder.jpg" alt="Speed Trait" id="speed-img">
+                </div>
+                <div class="trait" id="combat-skills">
+                    <h3 id="durability-header">Combat Skills</h3>
+                    <img src="placeholder.jpg" alt="Combat Skills Trait" id="combat-skills-img">
+                </div>
+            </div>
 
-        <!-- Container for each trait with placeholders for images -->
-        <div class="trait-container">
-            <div class="trait" id="power">
-                <h3 id="power-header">Power</h3>
-                <img src="placeholder.jpg" alt="Power Trait" id="power-img">
-            </div>
-            <div class="trait" id="durability">
-                <h3 id="durability-header">Durability</h3>
-                <img src="placeholder.jpg" alt="Durability Trait" id="durability-img">
-            </div>
-            <div class="trait" id="speed">
-                <h3 id="durability-header">Speed</h3>
-                <img src="placeholder.jpg" alt="Speed Trait" id="speed-img">
-            </div>
-            <div class="trait" id="combat-skills">
-                <h3 id="durability-header">Combat Skills</h3>
-                <img src="placeholder.jpg" alt="Combat Skills Trait" id="combat-skills-img">
+            <div class="content-child" id="combat-container">
+                <!-- Opponent Display -->
+                <div id="opponent" style="text-align: center; margin: 20px;">
+                    <!-- Opponent character info will be populated here by JavaScript -->
+                </div>
+
+                <!-- User Character's Final Stats Display -->
+                <div class="final-stats" id="final-stats">
+                    <!-- User's final character stats will display here -->
+                </div>
             </div>
         </div>
 
-        <!-- Opponent Display -->
-        <div id="opponent" style="text-align: center; margin: 20px;">
-            <!-- Opponent character info will be populated here by JavaScript -->
-        </div>
 
-        <!-- User Character's Final Stats Display -->
-        <div class="final-stats" id="final-stats">
-            <!-- User's final character stats will display here -->
-        </div>
+
 
         <!-- Result Display -->
         <div id="result-overlay">
