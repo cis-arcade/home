@@ -291,6 +291,14 @@ characterData = [
         "combat skills" :  0.9,
         "image" : "https://qph.cf2.quoracdn.net/main-qimg-6299e66525633fddbfdb7e00f63d1e8e"
     },
+    {
+        "name" : "Toby the Tram Engine",
+        "power" : 0.6,
+        "durability" :  0.5,
+        "speed" : 0.8,
+        "combat-skills" :  0.1,
+        "image" : "https://upload.wikimedia.org/wikipedia/en/4/45/TobyCGIpromo.png"
+    },
 ]
     let selectedTraits = { "power": null, "durability": null, "speed": null, "combat-skills": null };
     let opponentCharacter = null;
