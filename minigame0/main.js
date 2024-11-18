@@ -33,7 +33,9 @@ const responses = [
     'man or bear?': 'Beer.',
     'am i gonna be successful?': '(Nah) or (yup).',
     'are you magic?': '(Hell nah) or (duh)',
-    'is the sky up?': '(Erm idk)'
+    'is the sky up?': '(Erm idk)',
+    "what would happen if i turn off your computer?" : "i would find you and i would end you",
+    "is david dating krystal?" : "possibly............."
     };
 
   document.getElementById("button-special").addEventListener("click", function() {

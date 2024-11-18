@@ -1,91 +1,161 @@
-       /* Basic styling for the game layout */
-       @import url('https://fonts.cdnfonts.com/css/xerker-fw');
+/* Basic styling for the game layout */
+@import url('https://fonts.cdnfonts.com/css/xerker-fw');
 
-       body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: 'Xerker', sans-serif;
-        background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/559465cb-2c06-4177-a5ce-dee4c6409ce6/dg9vcow-d4c19986-3578-479d-90a1-a6b88ecb7d8f.png/v1/fill/w_1280,h_718,q_80,strp/fighting_dojo_vn_background_by_drechenaux_dg9vcow-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE4IiwicGF0aCI6IlwvZlwvNTU5NDY1Y2ItMmMwNi00MTc3LWE1Y2UtZGVlNGM2NDA5Y2U2XC9kZzl2Y293LWQ0YzE5OTg2LTM1NzgtNDc5ZC05MGExLWE2Yjg4ZWNiN2Q4Zi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zhU_Fb8M4WiLicMvZIDie-zgo_9Kma75D39FOpKsBwM");
-        color: white;
-              }
-      
-      .trait-container {
-        display: flex;
-        justify-content: space-around;
-        margin: 20px 0;
-        width: 80%;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Xerker', sans-serif;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/559465cb-2c06-4177-a5ce-dee4c6409ce6/dg9vcow-d4c19986-3578-479d-90a1-a6b88ecb7d8f.png/v1/fill/w_1280,h_718,q_80,strp/fighting_dojo_vn_background_by_drechenaux_dg9vcow-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE4IiwicGF0aCI6IlwvZlwvNTU5NDY1Y2ItMmMwNi00MTc3LWE1Y2UtZGVlNGM2NDA5Y2U2XC9kZzl2Y293LWQ0YzE5OTg2LTM1NzgtNDc5ZC05MGExLWE2Yjg4ZWNiN2Q4Zi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zhU_Fb8M4WiLicMvZIDie-zgo_9Kma75D39FOpKsBwM");
+  color: white;
       }
-      
-      .trait {
-        text-align: center;
-        cursor: pointer;
-      }
-      
-      .trait img {
-        width: 150px;
-        height: 150px;
-        border-radius: 10px;
-        transition: transform 0.3s;
-      }
-      
-      .trait img:hover {
-        transform: scale(1.04);
-      }
-      
-      .final-stats {
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      
-      #result-overlay {
-          display: none; /* Initially hidden */
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
-          color: white;
-          justify-content: center;
-          align-items: center;
-          z-index: 1000; /* Ensure it’s on top */
-          text-align: center;
-      }
-      
-      #result-overlay h1 {
-          font-size: 3em;
-          margin: 0;
-      }
-      .trait-info {
-          text-align: center;
-          font-size: 0.9em;
-          margin-top: 5px;
-          color: #333;
-      }
-      
-      .home-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: #ffffff;
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-  
-      .home-button:hover {
-        background-color: #0056b3;
-      }
-  
-      h1, h3, p {
-        background: black;
-        margin : 5px;
-        padding: 5px;
-      }
+
+.trait-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  width: 80%;
+}
+
+.trait {
+  text-align: center;
+  cursor: pointer;
+}
+
+.trait img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.trait img:hover {
+  transform: scale(1.04);
+}
+
+.final-stats {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#result-overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
+  color: white;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it’s on top */
+  text-align: center;
+}
+
+#result-overlay h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.trait-info {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: #333;
+}
+
+.home-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+}
+
+h1, h3, p {
+  background: black;
+  margin : 5px;
+  padding: 5px;
+}
+
+/* From Uiverse.io by Spacious74 */ 
+.button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  border: none;
+  padding: 2px;
+  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
+  position: relative;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px #ffffff38;
+  z-index: -1;
+}
+
+.blob1 {
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+  circle 60px at 0% 100%,
+  #3fe9ff,
+  #0000ff80,
+  transparent
+  );
+  box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.inner {
+  padding: 14px 25px;
+  border-radius: 14px;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+}
+.inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #00e1ff1a,
+    #0000ff11,
+    transparent
+  );
+  position: absolute;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  background: black;
+  padding: 10px;
+  width: 100%;
+}

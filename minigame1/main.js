@@ -407,8 +407,14 @@ characterData = [
         const overlay = document.getElementById("result-overlay");
         overlay.style.display = "flex";
         overlay.innerHTML = `
-            <h1>${resultText}</h1>
-            <button onclick="resetGame()">Play Again</button>
+            <div class="wrapper">
+                <h1>${resultText}</h1>
+                <button onclick="resetGame()" class="button">
+                    <div class="blob1"></div>
+                    <div class="blob2"></div>
+                    <div class="inner">Play Again</div>
+                </button>
+            </div>
         `;
     }
     
