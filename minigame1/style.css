@@ -84,19 +84,8 @@
         background-color: #0056b3;
       }
   
-      h1 {
+      h1, h3, p {
         background: black;
-        margin: 5px;
-      }
-
-      h3{
-        background-color: black;
-        margin: 5px;
-
-      }
-
-      p{
-        background-color: black;
-        margin: 5px;
-
+        margin : 5px;
+        padding: 5px;
       }
