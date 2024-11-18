@@ -296,11 +296,11 @@ characterData = [
         "power" : 0.6,
         "durability" :  0.5,
         "speed" : 0.8,
-        "combat-skills" :  0.1,
+        "combat skills" :  0.1,
         "image" : "https://upload.wikimedia.org/wikipedia/en/4/45/TobyCGIpromo.png"
     },
 ]
-    let selectedTraits = { "power": null, "durability": null, "speed": null, "combat-skills": null };
+    let selectedTraits = { "power": null, "durability": null, "speed": null, "combat skills": null };
     let opponentCharacter = null;
     const shuffleInterval = 100;
     let shuffleTimers = {};
@@ -322,12 +322,12 @@ characterData = [
             <p>Power: ${opponentCharacter.power}</p>
             <p>Durability: ${opponentCharacter.durability}</p>
             <p>Speed: ${opponentCharacter.speed}</p>
-            <p>Combat Skills: ${opponentCharacter["combat-skills"]}</p>`;
+            <p>Combat Skills: ${opponentCharacter["combat skills"]}</p>`;
     }
     
     // Shuffle images for all traits
     function startShufflingAllTraits() {
-        const traits = ["power", "durability", "speed", "combat-skills"];
+        const traits = ["power", "durability", "speed", "combat skills"];
         traits.forEach(trait => {
             if (!selectedTraits[trait]) { // Only shuffle traits that aren't selected yet
                 shuffleImages(trait);
@@ -391,7 +391,7 @@ characterData = [
     
     // Calculate the user's total score and compare with the opponent's score
     function calculateVictory() {
-        const userTotal = selectedTraits["combat-skills"]["combat skills"] * 2 + selectedTraits.speed.speed * 1.3 + selectedTraits.durability.durability * 1.5 + selectedTraits.power.power * 1.8
+        const userTotal = selectedTraits["combat skills"]["combat skills"] * 2 + selectedTraits.speed.speed * 1.3 + selectedTraits.durability.durability * 1.5 + selectedTraits.power.power * 1.8
         const opponentTotal = opponentCharacter.power * 1.8 + opponentCharacter.durability * 1.5 +
                               opponentCharacter.speed * 1.3 + opponentCharacter["combat skills"] * 2;
         if (userTotal > opponentTotal) {
@@ -414,7 +414,7 @@ characterData = [
     
     // Reset the game to start over
     function resetGame() {
-        selectedTraits = { "power": null, "durability": null, "speed": null, "combat-skills": null };
+        selectedTraits = { "power": null, "durability": null, "speed": null, "combat skills": null };
         document.getElementById("final-stats").innerHTML = ""; // Clear final stats display
         document.getElementById("result-overlay").style.display = "none"; // Hide overlay
         startGame(); // Restart the game
