@@ -452,7 +452,7 @@ function showOverlay(resultText) {
     overlay.style.display = "flex";
     overlay.innerHTML = `
         <h1>${resultText}</h1>
-        <button onclick="resetGame()">Play Again</button>
+        <button id="replay-button" onclick="resetGame()">Play Again</button>
     `;
 }
 
