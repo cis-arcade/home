@@ -345,7 +345,13 @@ let win_counter=0;
 function startGame() {
     generateOpponent();
     startShufflingAllTraits();
+    showWinCount();
     setTimeout(stopShufflingAllTraits, 1000); // Stop all shuffling after 1 second
+}
+
+function showWinCount() {
+    const win_element=document.getElementById("win-counter")
+    win_element.innerHTML=`Win Count: ${win_counter}`
 }
 
 // Generate a random opponent character at game start
@@ -409,8 +415,6 @@ function selectTrait(trait, characterName) {
     if (Object.values(selectedTraits).every(trait => trait !== null)) {
         displayFinalStats();
     } else {
-        console.log("done")
-        console.log(selectedTraits)
         startShufflingAllTraits();
         setTimeout(stopShufflingAllTraits, 1000); // Reshuffle remaining traits for 1 second
     }
@@ -430,19 +434,13 @@ function displayFinalStats() {
 // Calculate the user's total score and compare with the opponent's score
 function calculateVictory() {
     const userTotal = Object.keys(selectedTraits).reduce((sum, trait) => sum + selectedTraits[trait][trait], 0);
-  console.log(userTotal)
     const opponentTotal = opponentCharacter.power + opponentCharacter.durability +
                           opponentCharacter.speed + opponentCharacter["combat-skills"];
-    console.log(opponentTotal)
     if (userTotal > opponentTotal) {
         showOverlay("VICTORY");
         win_counter=win_counter+1
         const win_element=document.getElementById("win-counter")
-        win_element.innerHTML=win_counter
-        console.log("Win rate: " + win_counter)
-    
-        
-        
+        win_element.innerHTML=win_counter        
     } else {
         showOverlay("DEFEAT");
     }
