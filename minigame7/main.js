@@ -474,6 +474,17 @@ function resetGame() {
     startGame(); // Restart the game
 }
 
+function reset_clicked() {
+    let mybutt = document.getElementById("reset-game-img")
+    mybutt.src = "clicked.png"
+    resetGame()
+}
+
+function reset_unclicked(){
+    let mybutt = document.getElementById("reset-game-img")
+    mybutt.src = "unclicked.png"
+}
+
 // Start the game on page load
 window.onload = startGame;
 

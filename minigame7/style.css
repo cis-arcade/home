@@ -7,7 +7,7 @@
      font-family: Arial, sans-serif;
      background:#80b1db;
      color:#5c42a1;
-     background-image: url("https://www.worldatlas.com/upload/10/cd/10/shutterstock-565337620.jpg")
+     background-image: "mainbackground.png";
 }
  h1{
      font-size: 90px;
