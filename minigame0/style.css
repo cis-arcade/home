@@ -320,3 +320,17 @@ body {
   .home-button:hover {
     background-color: #0056b3;
   }
+
+
+  /* Adjust for mobile phones (screens smaller than 480px) */
+@media (max-width: 480px) {
+  #main {
+    width: 100%; /* Make main container full width */
+    padding: 10px;
+  }
+
+  .question-box {
+    flex-direction: column; /* Stack traits vertically */
+    align-items: center;
+  }
+}
