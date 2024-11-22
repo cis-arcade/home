@@ -1,151 +1,234 @@
-      /* Basic styling for the game layout */
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: monospace, sans-serif;
-        background: #588157;
-        color:#a3b18a;
-        }
-      
-      #trait-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 20px 0;
-        width: 50%;
-      }
-      
-      .trait {
-        text-align: center;
-        cursor: pointer;
-      }
+/* Base styles for desktop remain unchanged */
 
-      #content {
-        display: flex;
-        flex-direction: row;
-      }
-      
-      .content-child{
-        flex: 1;
-        margin: 20px;
-      }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace, sans-serif;
+  background: #588157;
+  color: #a3b18a;
+}
 
-      .trait img {
-        width: 150px;
-        height: 150px;
-        border-radius: 10px;
-        transition: transform 0.3s;
-      }
-      
-      .trait img:hover {
-        transform: scale(1.04);
-      }
-      
-      .final-stats {
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      
-      #result-overlay {
-          display: none; /* Initially hidden */
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
-          color: white;
-          justify-content: center;
-          align-items: center;
-          z-index: 1000; /* Ensure it’s on top */
-          text-align: center;
-      }
-      
-      #result-overlay h1 {
-          font-size: 3em;
-          margin: 0;
-      }
-      .trait-info {
-          text-align: center;
-          font-size: 0.9em;
-          margin-top: 5px;
-          color: #333;
-      }
-      
-      h1 {
-        font-size: 91px;
-        margin-bottom:10px;
-        background: #344e41;
-      }
-      h3{
-        font-size: 25px;
-      }
-      p{
-        font-size:  20px;
-        
-      }
-      #main{
-        background: #dad7cd;
-        width: 80%;
-      }
-      
-      #win-counter {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size:30px;
-      }
-      
-            
-      .home-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: #ffffff;
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-  
-      .home-button:hover {
-        background-color: #0056b3;
-      }
-  
-      #replay-button {
-        width: 9em;
-        height: 3em;
-        border-radius: 30em;
-        font-size: 15px;
-        font-family: inherit;
-        border: none;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        box-shadow: 6px 6px 12px #c5c5c5,
-                    -6px -6px 12px #ffffff;
-       }
-       
-       #replay-button::before {
-        content: '';
-        width: 0;
-        height: 3em;
-        border-radius: 30em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: linear-gradient(to right, #588157 0%, #a3b18a 100%);
-        transition: .5s ease;
-        display: block;
-        z-index: -1;
-       }
-       
-       #replay-button:hover::before {
-        width: 9em;
-       }
+#trait-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+  width: 50%;
+}
+
+.trait {
+  text-align: center;
+  cursor: pointer;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-child {
+  flex: 1;
+  margin: 20px;
+}
+
+.trait img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.trait img:hover {
+  transform: scale(1.04);
+}
+
+.final-stats {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#result-overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
+  color: white;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it’s on top */
+  text-align: center;
+}
+
+#result-overlay h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.trait-info {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: #333;
+}
+
+h1 {
+  font-size: 91px;
+  margin-bottom: 10px;
+  background: #344e41;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 20px;
+}
+
+#main {
+  background: #dad7cd;
+  width: 80%;
+}
+
+#win-counter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+}
+
+.home-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+}
+
+#replay-button {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+#replay-button::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #588157 0%, #a3b18a 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+#replay-button:hover::before {
+  width: 9em;
+}
+
+/* Responsive Styles */
+
+/* Adjust for tablets (screens smaller than 768px) */
+@media (max-width: 768px) {
+  #trait-container {
+    width: 90%;
+  }
+
+  #content {
+    flex-direction: column; /* Stack the content vertically */
+  }
+
+  .content-child {
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  p, h3 {
+    font-size: 18px;
+  }
+
+  .home-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #replay-button {
+    width: 7em;
+    height: 2.5em;
+    font-size: 14px;
+  }
+}
+
+/* Adjust for mobile phones (screens smaller than 480px) */
+@media (max-width: 480px) {
+  #main {
+    width: 100%; /* Make main container full width */
+    padding: 10px;
+  }
+
+  #trait-container {
+    flex-direction: column; /* Stack traits vertically */
+    align-items: center;
+  }
+
+  .trait img {
+    width: 120px; /* Reduce image size */
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  #win-counter {
+    font-size: 20px;
+  }
+
+  .home-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  #replay-button {
+    width: 6em;
+    height: 2em;
+    font-size: 12px;
+  }
+}
