@@ -1,97 +1,111 @@
- 
 /* Basic styling for the game layout */
- body {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     font-family: Arial, sans-serif;
-     color:#5c42a1;
-     background-image: url("mainbackground.png");
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color:#5c42a1;
+    background-image: url("mainbackground.png");
 }
- h1{
-     font-size: 90px;
-     font-family: "Comic Sans MS";
-     color: black;
+h1{
+    font-size: 90px;
+    font-family: "Comic Sans MS";
+    color: black;
 }
- .trait-container {
-     display: flex;
-     justify-content: space-around;
-     margin: 20px 0;
-     width: 80%;
-     background: black;
+.trait-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0;
+    width: 80%;
+    background: black;
 }
- .trait {
-     text-align: center;
-     cursor: pointer;
-}
- .trait img {
-     width: 150px;
-     height: 150px;
-     border-radius: 10px;
-     transition: transform 0.3s;
-}
- .trait img:hover {
-     transform: scale(1.04);
-}
- .final-stats {
-     margin-top: 20px;
-     font-size: 18px;
-     font-weight: bold;
-}
- #result-overlay {
-     display: none;
-    /* Initially hidden */
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 15%;
-     background-color: rgba(0, 0, 0, 0.0);
-    /* Black with transparency */
-     color: white;
-     justify-content: center;
-     align-items: center;
-     z-index: 1000;
-    /* Ensure it’s on top */
-     text-align: center;
-}
- #result-overlay h1 {
-     font-size: 3em;
-     margin: 0;
-}
- .trait-info {
-     text-align: center;
-     font-size: 0.9em;
-     margin-top: 5px;
-     color: #333;
-}
- 
-      
-.home-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
+.trait {
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
+}
+.trait img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.trait img:hover {
+    transform: scale(1.04);
+}
+.final-stats {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#result-overlay {
+    display: none;
+   /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(0, 0, 0, 0.0);
+   /* Black with transparency */
+    color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+   /* Ensure it’s on top */
+    text-align: center;
+}
+#result-overlay h1 {
+    font-size: 3em;
+    margin: 0;
+}
+.trait-info {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #333;
+}
+    
+.home-button {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   padding: 10px 20px;
+   font-size: 16px;
+   color: #ffffff;
+   background-color: #007bff;
+   border: none;
+   border-radius: 5px;
+   text-decoration: none;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
 
-  .home-button:hover {
-    background-color: #0056b3;
-  }
 
-  #reset-game-img {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    border: none;
-    text-decoration: none;
-    width: 200px;
-  }
+ .home-button:hover {
+   background-color: #0056b3;
+ }
+
+
+ #reset-game-img {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   padding: 10px 20px;
+   border: none;
+   text-decoration: none;
+   width: 200px;
+ }
+
+#gamebox{
+  display:flex;
+  flex-direction: row;
+}
+
+#opponent {
+  background-color: rgb(0, 0, 0)
+}
+
+
+
+
