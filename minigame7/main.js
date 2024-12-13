@@ -438,25 +438,38 @@ const characterData = [
     if (Object.values(selectedTraits).every(trait => trait !== null)) {
         displayFinalStats();
     } else {
-        console.log("done")
-        console.log(selectedTraits)
         startShufflingAllTraits();
         setTimeout(stopShufflingAllTraits, 1000); // Reshuffle remaining traits for 1 second
     }
  }
  
  
- // Display final stats once all traits are selected and determine victory
- function displayFinalStats() {
-    const finalStats = Object.keys(selectedTraits).map(trait => {
-        return `<p>${trait.charAt(0).toUpperCase() + trait.slice(1)}: ${selectedTraits[trait][trait]}</p>`;
-    }).join('');
-    document.getElementById("final-stats").innerHTML = `<h3>Your Character's Stats:</h3>${finalStats}`;
- 
- 
-    // Calculate victory or defeat based on the aggregated score
-    calculateVictory();
- }
+function displayFinalStats() {
+    // Check if any trait is not selected, and use the data from the trait-container if empty
+    const traits = ["power", "durability", "speed", "combat-skills"];
+    traits.forEach(trait => {
+        if (selectedTraits[trait] === null) {
+            // Get the character data from the corresponding trait container
+            const trait_item = document.getElementById(trait);
+            const characterName = trait_item.querySelector("img").dataset.character;  // Get the trait name from the header
+            selectedTraits[trait] = characterData.find(c => c.name === characterName);
+        }
+    });
+
+    console.log(selectedTraits)
+    // Now that all traits are selected (or substituted from the trait-container), display the final stats
+    const finalStatsElement = document.getElementById("final-stats");
+    finalStatsElement.innerHTML = `
+        <h3>Final Stats</h3>
+        <p>Power: ${selectedTraits["power"].power}</p>
+        <p>Durability: ${selectedTraits["durability"].durability}</p>
+        <p>Speed: ${selectedTraits["speed"].speed}</p>
+        <p>Combat Skills: ${selectedTraits["combat-skills"].combatSkills}</p>
+        <img src="${selectedTraits["power"].image}" alt="${selectedTraits["power"].name}" width="500" height="500">
+    `;
+    calculateVictory()
+}
+
  
  
  // Calculate the user's total score and compare with the opponent's score
@@ -495,16 +508,26 @@ const characterData = [
     startGame(); // Restart the game
  }
  
- 
+
  function reset_clicked() {
     let mybutt = document.getElementById("reset-game-img")
     mybutt.src = "clicked.png"
     resetGame()
  }
- 
- 
+
  function reset_unclicked(){
     let mybutt = document.getElementById("reset-game-img")
+    mybutt.src = "unclicked.png"
+ }
+
+ function attack_clicked() {
+    let mybutt = document.getElementById("attack")
+    mybutt.src = "clicked.png"
+    displayFinalStats()
+ }
+
+ function attack_unclicked(){
+    let mybutt = document.getElementById("attack")
     mybutt.src = "unclicked.png"
  }
  
